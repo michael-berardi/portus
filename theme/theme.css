@@ -1,0 +1,227 @@
+/* Portus Theme v3.3 - Minimal, No Ghosting */
+
+body {
+    --font-interface-theme: "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    --font-text-theme: "SF Pro Text", -apple-system, system-ui, sans-serif;
+    --font-monospace-theme: "SF Mono", ui-monospace, monospace;
+    --font-interface: var(--font-interface-theme);
+    --font-text: var(--font-text-theme);
+    --font-monospace: var(--font-monospace-theme);
+    --radius-s: 6px;
+    --radius-m: 10px;
+    --radius-l: 14px;
+    --header-height: 44px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.theme-light {
+    --background-primary: #FFFFFF;
+    --background-primary-alt: #F5F5F7;
+    --background-secondary: #F5F5F7;
+    --background-secondary-alt: #EFEFF1;
+    --background-modifier-hover: rgba(0, 0, 0, 0.04);
+    --background-modifier-border: rgba(0, 0, 0, 0.1);
+    --background-modifier-border-focus: #007AFF;
+    --text-normal: #1D1D1F;
+    --text-muted: #6E6E73;
+    --text-faint: #86868B;
+    --text-accent: #007AFF;
+    --text-accent-hover: #0066D6;
+    --text-on-accent: #FFFFFF;
+    --interactive-accent: #007AFF;
+    --interactive-accent-hover: #0066D6;
+    --nav-item-background-hover: rgba(0, 0, 0, 0.04);
+    --nav-item-background-active: rgba(0, 122, 255, 0.12);
+    --nav-item-color: #1D1D1F;
+    --nav-item-color-hover: #1D1D1F;
+    --nav-item-color-active: #007AFF;
+    --tab-container-background: #F5F5F7;
+    --titlebar-background: #F5F5F7;
+    --titlebar-background-focused: #F5F5F7;
+    --scrollbar-thumb-bg: rgba(0, 0, 0, 0.15);
+    --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.25);
+    --ribbon-background: #F5F5F7;
+}
+
+.theme-dark {
+    --background-primary: #000000;
+    --background-primary-alt: #1C1C1E;
+    --background-secondary: #1C1C1E;
+    --background-secondary-alt: #2C2C2E;
+    --background-modifier-hover: rgba(255, 255, 255, 0.08);
+    --background-modifier-border: rgba(255, 255, 255, 0.15);
+    --background-modifier-border-focus: #0A84FF;
+    --text-normal: #F5F5F7;
+    --text-muted: #A1A1A6;
+    --text-faint: #8E8E93;
+    --text-accent: #0A84FF;
+    --text-accent-hover: #409CFF;
+    --text-on-accent: #FFFFFF;
+    --interactive-accent: #0A84FF;
+    --interactive-accent-hover: #409CFF;
+    --nav-item-background-hover: rgba(255, 255, 255, 0.08);
+    --nav-item-background-active: rgba(10, 132, 255, 0.25);
+    --nav-item-color: #F5F5F7;
+    --nav-item-color-hover: #F5F5F7;
+    --nav-item-color-active: #0A84FF;
+    --tab-container-background: #1C1C1E;
+    --titlebar-background: #000000;
+    --titlebar-background-focused: #000000;
+    --scrollbar-thumb-bg: rgba(255, 255, 255, 0.18);
+    --scrollbar-active-thumb-bg: rgba(255, 255, 255, 0.28);
+    --ribbon-background: #000000;
+}
+
+.titlebar {
+    background-color: var(--titlebar-background);
+}
+
+.titlebar-text {
+    color: var(--text-normal);
+    opacity: 1;
+}
+
+.nav-file-title,
+.nav-folder-title {
+    color: var(--nav-item-color);
+    border-radius: var(--radius-s);
+    opacity: 1;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+    background-color: var(--nav-item-background-hover);
+    color: var(--nav-item-color-hover);
+}
+
+.nav-file-title.is-active,
+.nav-folder-title.is-active {
+    background-color: var(--nav-item-background-active);
+    color: var(--nav-item-color-active);
+}
+
+.nav-file-title-content,
+.nav-folder-title-content {
+    color: inherit;
+    opacity: 1;
+}
+
+.workspace-sidedock-vault-profile {
+    transition: background-color 0s;
+}
+
+.workspace-sidedock-vault-profile:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.workspace-sidedock-vault-profile:not(:hover) {
+    background-color: transparent;
+}
+
+.workspace-tab-header-container {
+    background-color: var(--tab-container-background);
+}
+
+.modal {
+    background-color: var(--background-secondary);
+    border-radius: var(--radius-l);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.menu {
+    background-color: var(--background-secondary);
+    border-radius: var(--radius-m);
+    padding: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--background-modifier-border);
+}
+
+.menu-item {
+    border-radius: var(--radius-s);
+    padding: 6px 12px;
+    color: var(--text-normal);
+}
+
+.menu-item:hover {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+.menu-separator {
+    background-color: var(--background-modifier-border);
+    margin: 4px 0;
+    height: 1px;
+}
+
+.prompt {
+    background-color: var(--background-secondary);
+    border-radius: var(--radius-l);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-container {
+    background-color: var(--background-secondary);
+    border-radius: var(--radius-m);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-item {
+    border-radius: var(--radius-s);
+}
+
+.suggestion-item.is-selected {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+button.mod-cta {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-radius: var(--radius-m);
+    font-weight: 500;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-bg);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-active-thumb-bg);
+}
+
+.is-mobile .nav-file-title,
+.is-mobile .nav-folder-title {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}
+
+@supports (backdrop-filter: blur(20px)) {
+    .is-translucent .titlebar {
+        backdrop-filter: blur(24px) saturate(180%);
+        -webkit-backdrop-filter: blur(24px) saturate(180%);
+    }
+
+    .theme-light.is-translucent .titlebar {
+        background-color: rgba(245, 245, 247, 0.85);
+    }
+
+    .theme-dark.is-translucent .titlebar {
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+}
